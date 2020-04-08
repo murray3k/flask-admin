@@ -614,7 +614,7 @@ class ModelView(BaseModelView):
                 placeholders.append(
                     self.column_labels.get(searchable, searchable))
 
-        return u', '.join(placeholders)
+        return u', '.join(map(str, placeholders))
 
     def scaffold_filters(self, name):
         """
